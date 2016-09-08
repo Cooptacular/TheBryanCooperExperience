@@ -5,6 +5,10 @@
  */
 
 /* Global Styles */
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
 
 html,
 body {
