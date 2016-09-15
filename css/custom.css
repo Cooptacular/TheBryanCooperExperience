@@ -41,4 +41,9 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+    .navbar-custom .navbar-brand  {
+    min-width: 45px;
+    background-position-y: center;
+    margin-left: 16px;
+    }
 }
