@@ -36,7 +36,9 @@
       font-size: 1.25em;
       font-weight: 300;
     }
-
+    .aboutTitle.credence{
+       padding-top: 50px;
+    }
     p {
       padding-left: 15px;
       padding-right: 15px;
