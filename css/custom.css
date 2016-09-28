@@ -1,5 +1,6 @@
 h1, h2 {
   color: #000000;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
 }
 .titleImg {
 	 display: block;
@@ -13,15 +14,19 @@ h1, h2 {
 .success.mission {
   background-color: #FFF;
   color: #000000;
+  padding-top: 200px;
 }
 .aboutTitle {
   display: block;
   margin: 0 auto 0px;
   max-width: 100%;
   padding-bottom: 25px; 
+
 }
-.aboutTitle.credence{
-  padding-top: 150px;
+.aboutTitle.credence {
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .aboutText {
   color: #000000;
@@ -31,6 +36,15 @@ h1, h2 {
 .portfolio {
   padding-bottom: 50px;
   max-width: 100%;
+}
+.glyphicon.glyphicon-fire {
+    font-size: 75px;
+}
+.glyphicon.glyphicon-pencil {
+    font-size: 75px;
+}
+.glyphicon.glyphicon-camera {
+    font-size: 75px;
 }
 
 /*iPhone 6 Media Query*/
