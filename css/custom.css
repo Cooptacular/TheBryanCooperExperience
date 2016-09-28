@@ -30,6 +30,7 @@ h1, h2 {
 }
 .portfolio {
   padding-bottom: 50px;
+  max-width: 100%;
 }
 
 /*iPhone 6 Media Query*/
