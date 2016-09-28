@@ -47,6 +47,11 @@ h1, h2 {
 .glyphicon.glyphicon-camera {
     font-size: 75px;
 }
+.inlineImg {
+    display: inline;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 
 /*iPhone 6 Media Query*/
 @media only screen 
