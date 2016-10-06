@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    <title>Another Brick In The Wall</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="css/anotherBrick-stylesheet.css">
+</head>
+<body>
+	<div class="wrapper">
+		
+		<div id="aBrick" class="missingHole"></div>
+		<div id="anotherBrick">
+		<br>
+			<img id="dragBrick" class="brickStart" src="img/anotherBrick/brick.png" draggable="true" ondragstart="drag(event)" width="67" height="50">
+		</div>
+		<div id="arrowBuild">
+    		<a href="index.html"><img src="img/anotherBrick/arrowSprite.png"/></a>
+		</div>
+		<div id="quote"></div>
+	</div><!-- end wrapper -->
+<!-- =============================START JAVASCRIPT =================================-->	
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script>
+$(document).ready(function () {
+	var brickPosition = $("#brickStart");
+	$("#arrowBuild").hide();
+
+// Start Sprite Animation
+	var imgWidth = 286;
+	var numImgs = 12;
+	var cont = 0;
+
+//end Sprite
+
+
+	function drag_start(event) {
+    	var style = window.getComputedStyle(event.target, null);
+    	event.dataTransfer.setData("text/plain",
+    	(parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+	} 
+	function drag_over(event) { 
+    event.preventDefault(); 
+    return false; 
+	} 
+	function drop(event) { 
+	    var offset = event.dataTransfer.getData("text/plain").split(',');
+	    var dm = document.getElementById("dragBrick");
+	    dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+	    dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+	    event.preventDefault();
+	    
+	    var positionDrag = new Array();
+	    positionDrag[0] = $("#dragBrick").offset().left;
+	    positionDrag[1] = $("#dragBrick").offset().top;
+	    
+	    var positionTarget = new Array();
+	    positionTarget[0] = $("#aBrick").offset().left;
+	    positionTarget[1] = $("#aBrick").offset().top;
+
+	    distance = Math.sqrt(Math.pow(positionTarget[0]-positionDrag[0], 2) + Math.pow(positionTarget[1]-positionDrag[1], 2));
+
+	    if(distance < 10) {
+	    	
+	    	$("#arrowBuild").show();
+	    	$("#quote").css({ height: 324, 'background-image': 'url("img/quoteBuild.png")' });
+
+	    	var animation = setInterval(function(){
+	    	var position =  -1 * (cont*imgWidth);
+	    	$("#arrowBuild").find('img').css('margin-left', position);
+	    	
+	    	cont++;
+	    
+	    	if(cont == numImgs){
+	        clearInterval(animation);
+	    }
+			},100);
+	    }
+
+
+	    return false;
+	} 
+	var dm = document.getElementById('dragBrick'); 
+	dm.addEventListener('dragstart',drag_start,false); 
+	document.body.addEventListener('dragover',drag_over,false); 
+	document.body.addEventListener('drop',drop,false); 
+    
+	
+
+});
+</script>
+</body>
+
+</html>
