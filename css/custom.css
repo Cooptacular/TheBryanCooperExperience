@@ -1,0 +1,93 @@
+h1, h2 {
+  color: #000000;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+}
+.titleImg {
+	 display: block;
+   max-width: 90%;
+   height: auto;
+}
+.headerText{
+  font-size: 2.25em;
+  font-weight: 300;
+}
+.success.mission {
+  background-color: #FFF;
+  color: #000000;
+  padding-top: 200px;
+}
+.aboutTitle {
+  display: block;
+  margin: 0 auto 0px;
+  max-width: 100%;
+  padding-bottom: 25px; 
+
+}
+.aboutTitle.credence {
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.aboutText {
+  color: #000000;
+  font-size: 20px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+.portfolio {
+  padding-bottom: 50px;
+  max-width: 100%;
+}
+.glyphicon.glyphicon-fire {
+    font-size: 75px;
+}
+.glyphicon.glyphicon-pencil {
+    font-size: 75px;
+}
+.glyphicon.glyphicon-camera {
+    font-size: 75px;
+}
+.inlineImg {
+    display: inline;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.space {
+    padding-top: 200px;
+}
+.footerCopy {
+    color: #FFF;
+}
+
+/*iPhone 6 Media Query*/
+@media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{
+    .headerText {
+      font-size: 1.25em;
+      font-weight: 300;
+    }
+    .aboutTitle.credence{
+       padding-top: 25px;
+    }
+    p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .navbar-custom .navbar-brand  {
+      min-width: 45px;
+      background-position-y: center;
+      margin-left: 16px;
+    }
+    .success.mission {
+      padding-top: 50px;
+    }
+    .space {
+    padding-top: 50px;
+}
+}
+.modal-body {
+  padding-bottom: 100px;
+}
