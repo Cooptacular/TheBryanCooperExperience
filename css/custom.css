@@ -65,6 +65,10 @@ h1, h2 {
     only screen and (max-device-width: 667px), 
     only screen and (max-width: 480px)
 {
+    .tagline {
+      font-size: 24px;
+      margin-top: -26px;
+    }
     .headerText {
       font-size: 1.25em;
       font-weight: 300;
