@@ -58,7 +58,10 @@ h1, h2 {
 .footerCopy {
     color: #FFF;
 }
-
+.fullWidth {
+  width: 100%;
+  margin-left: 0%;
+}
 /*iPhone 6 Media Query*/
 @media only screen 
     and (max-device-width: 640px), 
