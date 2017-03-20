@@ -68,6 +68,9 @@ h1, h2 {
     only screen and (max-device-width: 667px), 
     only screen and (max-width: 480px)
 {
+    .portfolio-modal .modal-content h2 {
+      font-size: 2em;
+    }
     .tagline {
       font-size: 19px;
       margin-top: -26px;
