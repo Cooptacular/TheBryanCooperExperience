@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<meta charset="utf-8">
+	 <meta charset="utf-8">
+    <title>Another Brick In The Wall</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-	<link rel="stylesheet" type="text/css" href="css/anotherBrick-stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="anotherBrickstylesheet.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -17,15 +13,15 @@
 		<div id="aBrick" class="missingHole"></div>
 		<div id="anotherBrick">
 		<br>
-			<img id="dragBrick" class="brickStart" src="img/anotherBrick/brick.png" draggable="true" ondragstart="drag(event)" width="67" height="50">
+			<img id="dragBrick" class="brickStart" src="img/brick.png" draggable="true" ondragstart="drag(event)" width="67" height="50">
 		</div>
 		<div id="arrowBuild">
-    		<a href="index.html"><img src="img/anotherBrick/arrowSprite.png"/></a>
+    		<a href="../index.html"><img src="img/arrowSprite.png"/></a>
 		</div>
 		<div id="quote"></div>
 	</div><!-- end wrapper -->
 <!-- =============================START JAVASCRIPT =================================-->	
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
 <script>
 $(document).ready(function () {
 	var brickPosition = $("#brickStart");
